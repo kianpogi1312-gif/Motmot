@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>A Letter For You</title>
+
+<!-- Fonts: a script face for headings, a warm serif for the letter body -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Parisienne&family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Floating hearts & sparkles are injected here by script.js -->
+<div class="particle-field" id="particleField" aria-hidden="true"></div>
+
+<!-- ============================= -->
+<!-- SCREEN 1: THE OPENING SCREEN  -->
+<!-- ============================= -->
+<section class="screen intro-screen" id="introScreen">
+  <div class="glow-heart" aria-hidden="true">
+    <svg viewBox="0 0 32 29" class="heart-svg">
+      <path d="M16 28.5C16 28.5 1 19.3 1 9.6 1 4.8 4.8 1 9.6 1c2.9 0 5.5 1.4 7.2 3.6C18.5 2.4 21.1 1 24 1c4.8 0 8.6 3.8 8.6 8.6 0 9.7-16.6 18.9-16.6 18.9z" transform="translate(-0.3,0)"/>
+    </svg>
+  </div>
+
+  <p class="eyebrow-line">for you</p>
+  <h1 class="intro-title">Happy Monthsary<br> Love! &hellip;</h1>
+
+  <button class="open-btn" id="openLetterBtn" type="button">
+    <span>Open My Letter</span> <span class="btn-envelope">💌</span>
+  </button>
+</section>
+
+<!-- ============================= -->
+<!-- SCREEN 2: THE LOVE LETTER     -->
+<!-- ============================= -->
+<section class="screen letter-screen" id="letterScreen" hidden>
+
+  <div class="letter-card" id="letterCard">
+    <div class="corner corner-tl" aria-hidden="true"></div>
+    <div class="corner corner-tr" aria-hidden="true"></div>
+    <div class="corner corner-bl" aria-hidden="true"></div>
+    <div class="corner corner-br" aria-hidden="true"></div>
+
+    <!-- CUSTOMIZE: change the title below if you'd like something other than "To My Love" -->
+    <h2 class="letter-title">To My Love</h2>
+    <div class="title-flourish" aria-hidden="true">❦</div>
+
+    <!-- CUSTOMIZE: change "Recipient's Name" to the name of the person receiving the letter -->
+    <p class="letter-recipient">My dearest <span id="recipientName">Recipient's Name</span>,</p>
+
+    <!-- 
+      CUSTOMIZE THE LETTER TEXT HERE.
+      This is typed out on screen one line at a time by script.js.
+      Keep each sentence reasonably short so the typing animation reads well.
+      Add or remove lines from the array in script.js (see LETTER_LINES).
+    -->
+    <p class="letter-body" id="letterBody" aria-live="polite"></p>
+
+    <!-- CUSTOMIZE: change "Your Name" to the sender's name -->
+    <div class="signature">
+      <p class="signature-line">Forever yours,</p>
+      <p class="signature-name" id="senderName">Your Name</p>
+    </div>
+  </div>
+
+  <!-- Final reveal message, shown once the typing animation finishes -->
+  <p class="final-message" id="finalMessage">
+    And I hope you know how much you mean to me. ❤️
+  </p>
+
+</section>
+
+<!-- ============================= -->
+<!-- MUSIC PLAYER                 -->
+<!-- ============================= -->
+<!--
+  CUSTOMIZE: put your own romantic instrumental track in this same folder
+  and name it "music.mp3" (or update the src below to match your filename).
+  Keep it royalty-free / something you have the rights to use.
+-->
+<audio id="bgMusic" loop preload="none">
+  <source src="JUST CALL IT LOVE - DENNIS VAN AARSSEN (Karaoke Version).mp3" type="audio/mpeg">
+</audio>
+
+<button class="music-toggle" id="musicToggle" type="button" aria-label="Play background music">
+  <span class="music-note note1">♪</span>
+  <span class="music-note note2">♫</span>
+  <span class="music-icon" id="musicIcon">♪</span>
+</button>
+
+<script src="script.js"></script>
+</body>
+</html>
