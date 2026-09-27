@@ -96,6 +96,10 @@ body {
   text-align: center;
 }
 
+.screen[hidden] {
+  display: none !important;
+}
+
 /* ============================= */
 /* SCREEN 1 — INTRO              */
 /* ============================= */
